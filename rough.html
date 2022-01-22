@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>rough</title>
+	<style type="text/css">
+		audio {
+  width: 150px;
+  height: 50px;
+  background-color: transparent;
+}
+
+audio::-webkit-media-controls-panel {
+  -webkit-justify-content: center;
+  height: 50px;
+  background-color: transparent;
+}
+
+/* Removes the timeline */
+audio::-webkit-media-controls-timeline {
+  display: none !important;
+}
+audio::-webkit-media-controls-mute-button{
+	display: none;
+}
+audio::-webkit-media-controls-play-button{
+  background-color: darkred;
+  border-radius: 50%;
+}
+/* Removes the time stamp */
+audio::-webkit-media-controls-current-time-display {
+  display: none;
+}
+audio::-webkit-media-controls-time-remaining-display {
+  display: none;
+}
+	</style>
+</head>
+<body>
+	<audio controls autoplay loop>
+				<source src="E:\Coding Ninja\Music Player\SrivalliRingtonebySidSriram834028942.mp3" type="	audio/mp3">
+			</audio>
+</body>
+</html>

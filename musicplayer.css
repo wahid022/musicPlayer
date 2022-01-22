@@ -1,0 +1,287 @@
+
+    main{
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      height: 76vh;
+      overflow: hidden;
+      padding: 30px;
+      
+    }
+    .hide-scroll::-webkit-scrollbar  {
+      display: none;
+    }
+    #feed,#queue{
+      position: relative;
+    }
+
+    #feed {
+      width: 100%;
+      padding: 20px;
+      overflow: auto;
+    }
+
+  
+    #genre,#cover,#Popular-artist,#latest-hindi,#latest-english,#stations{
+      margin-bottom: 20px;
+    }
+    #genre .cover-block{
+      overflow: hidden;
+      height: 12vh;
+      box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.8);
+      justify-content: space-around;
+    }
+    .cover-block{
+      height: 25vh;
+      width: 30%;
+      position: relative;
+      object-fit: cover;
+      margin: 10px;
+
+
+    }
+    .cover-block div{
+      z-index: 1;
+      width: 100%;
+      font-size: 1.2em;
+      position: absolute;
+      top: 45%;
+      text-align: center;
+    }
+    .cover-block div:hover{
+      letter-spacing: 2px;
+      transition: 0.1s ease-in;
+      font-size: 1.3em;
+    }
+    .cover-block img{
+      position: relative;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+      box-shadow: 0px 0px 20px 3px rgba(255, 255, 255, 0.2);
+    }
+    .cover-block img:hover{
+      transform: scale(1.1);
+      transition: 0.15s ease;
+    }
+    #latest-release{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    #latest-release .album-block{
+      margin: 5px;
+      display: flex;
+      justify-content: space-between;
+      width: 45%;
+    }
+    #latest-release .album-block .album-image{
+      height: 100px;
+      width: 100px;
+      margin-right: 10px;
+      position: relative;
+    }
+    #latest-release .album-block .album-image img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+    }
+    #Popular-artist,#latest-hindi,#latest-english,#stations{
+      padding: 10px;
+      font-size: small;
+      font-family: sans-serif;
+      overflow: auto;
+    }
+    #Popular-artist,#stations{
+      text-align: center;
+    }
+    #Popular-artist .block,#latest-hindi .block,#latest-english .block,#stations .block{
+      width: auto;
+      margin: 5px;
+      object-fit: cover;
+      position: relative;
+    }
+    #Popular-artist .block img,#latest-hindi .block img,#latest-english .block img,#stations .block img{
+      position: relative;
+      height: 90px;
+      width: 90px;
+      object-fit: cover;
+    }
+    #Popular-artist .block img,#stations .block img{
+      text-align: center;
+      border-radius: 50%;
+    }
+    #latest-hindi .block img,#latest-english .block img{
+      border-radius: 5px;
+    }
+    #stations{
+      background-color: #101642;
+    }
+    #station-header{
+      position: relative;
+      margin-right: 5px;
+      align-self: center;
+    }
+    #station-header div{
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      z-index: 1;
+      top: 45%;
+    }
+    #station-header img{
+      object-fit: cover;
+      height: 100px;
+      width: 100px;
+      border-radius: 10px;
+    }
+    #stations .block div{
+      position: absolute;
+      z-index: 1;
+      top: 45%;
+      width: 100%;
+      text-align: center;
+    }
+    #stations .block img:hover{
+      transform: scale(1.1);
+      transition: 0.2s ease;
+    }
+
+    @media screen and (min-width: 1250px){
+      #feed{
+        width: 65%;
+      }
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media screen and (max-width: 1250px){
+      #queue{
+        display: none;
+      }
+    }
+
+    #queue{
+      font-size: 0.8em;
+      position: absolute;
+      right: 30px;
+      background-color: #939393e3;
+      z-index: 5;
+      width: auto;
+      height: inherit;
+      align-items: center;
+      padding: 0px 5px 5px;
+      overflow: auto;      
+    }
+   
+    #queue .exit{
+      text-align: end;
+      position: absolute;
+      top: 1vh;
+      right: 1vw;
+      z-index: 12;
+      font-size: 1rem;
+    }
+    #queue .exit i{
+      color: whitesmoke;
+      font-size: 1rem;
+    }
+    #queue:target{
+      display: flex;
+      flex-direction: column;
+      transition: all 2s ease;
+      box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.2);
+      animation: fadeInAnimation ease 1.5s ;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+    #queue-header{
+      position: sticky;
+      font-size: 1.2rem;
+      width: 348px;
+      top: 0px;
+      right: 0px;
+      background-color: #0c1027;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 5px;
+      z-index: 6;
+    }
+    #queue-header a{
+      color: seagreen;
+    }
+    #queue-header .dropdown-content a{
+      color: whitesmoke;
+    }
+    #queue-header .dropdown{
+      align-self: center;
+    }
+    #queue-header .dropdown i{
+      padding-left: 5px;
+    }
+    #queue-header h4{
+      color: #2c7470;
+    }
+    #queue-header h4 i{
+      margin-left: 10px;
+      font-size: 0.7em;     
+    }
+    #queue-list{
+      border: 3px solid #0c1027;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #queue-list .block{
+      width: 30vh;
+      margin: 5px;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #0c1027;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 1.2em;
+    }
+    #queue-list .block .album{
+      position: relative;
+    }
+    #queue-list .block .album .image-block{
+      width: 8.5vmin;
+      height: 8.5vmin;
+      position: relative;
+      margin-right: 8px;
+    }
+    #queue-list .block img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-right: 10px;
+      box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.1);
+
+    }
+    #queue-list .block .icon{
+      align-self: center;
+    }
+    .icon a{
+      color: whitesmoke;
+      font-size: 1rem;
+    }

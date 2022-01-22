@@ -1,0 +1,197 @@
+main{
+      height: 80vh;
+      overflow: hidden;
+    }
+    i{
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    @media screen and (min-width: 1250px){
+      #artist-page{
+        width: 68%;
+      }
+      .exit{
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 1250px){
+      #aside-list{
+        display: none;
+      }
+    }
+
+
+
+
+
+    #artist-page,#artist-page{
+      height: inherit;
+    }
+    .song-list{
+      height: 55%;
+      overflow: auto;
+    }
+
+    .list-block{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px;
+      margin: 3px;
+      border-radius: 5px;
+    }
+    .list-block .album-block{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .list-block .album-block .album{
+      position: relative;
+    }
+    .list-block .album-block .album img{
+      border-radius: 5px;
+      height: 65px;
+      width: 65px;
+      object-fit: cover;
+      margin-right: 10px;
+      box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.4);
+    }
+    .list-block .icon i{
+      margin: 3px;
+      font-size: 1em;
+    }
+    .list-header{
+      font-family: cursive;
+      background-color: #3a3a3a;
+      display: flex;
+      justify-content: space-between;
+      position: sticky;
+      padding: 5px;
+      top: 0px;
+      z-index: 3;
+    }
+
+
+    
+
+
+    #artist-page{
+      padding: 20px;
+   /*   width: 100%;*/
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+    #artist-page .page-cover{
+      margin: 10px;
+      height: 40%;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+    #artist-page .page-cover .album{
+      height: auto;
+      width: 250px;
+    }
+    #artist-page .page-cover .description{
+      width: 80%;
+    }
+    #artist-page .page-cover .description .about{
+     height: 25%;
+     border-radius: 10px;
+     padding: 15px;
+     font-weight: 20;
+     letter-spacing: 0.8px;
+     font-size: 0.8em;
+     font-family: cursive;
+     background-color: #4e4e4e5c;
+     overflow: auto;
+    }
+    #artist-page .page-cover .description .about::-webkit-scrollbar{
+      display: none;
+    }
+    #artist-page .page-cover img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -1;
+
+    }
+    #artist-page .list-block{
+      background-color: #414444d1;
+    }
+    #artist-page .list-block:hover{
+      background-color: #3d4242;
+    }
+    .description{
+      width: 50%;
+      padding: 10px;
+      overflow: auto;
+    }
+    .description .title{
+      display: flex;
+      justify-content: space-between;
+    }
+    #btn1,#btn2{
+      border: 0px;
+      color: whitesmoke;
+      padding: 10px;
+    }
+    #btn1 a,#btn2 a{
+      color: whitesmoke;
+      text-decoration: none;
+    }
+    #btn1{
+      background: linear-gradient(45deg, #1b0ee7, #7f0b819e);
+      margin-right: 5px;
+      border-radius: 5px;
+    }
+    #btn2{
+      border-left: 3px solid whitesmoke;
+      background-color: transparent;
+    }
+
+
+
+    #aside-list{
+      width: 360px;
+      padding: 5px;
+      padding-top: 10px;
+      position: fixed;
+      overflow: hidden;
+      top: 10vh;
+      right: 10px ;
+      border-radius: 5px;
+      background-color: #4e4e4edb;
+    }
+    #aside-list .exit{
+      font-size: 1.1em;
+      position: fixed;
+      right: 20px;
+      top: 98px;
+    }
+    #aside-list:target{
+      display: block;
+      animation: fadeInAnimation ease 0.5s ;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+    #aside-list .list-block:hover{
+      background-color: #99989dd4;
+    }
+    #similar-artist,#recently-played{
+      height: 38vh;
+      width: 100%;
+      overflow: auto;
+      position: relative;
+      box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.5);
+      margin-top: 10px;
+    }
+    #similar-artist .list-block{
+      align-items: flex-start;
+    }
+    #similar-artist .list-block .album img{
+      height: 85px;
+      width: 85px;
+      object-fit: cover;
+    }
